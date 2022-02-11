@@ -13,7 +13,12 @@ The raw outputs of the LC-MS²Struct for the experiments presented in the manusc
 - **ALLDATA**: https://zenodo.org/record/6036208
 - **ONLYSTEREO**: https://zenodo.org/record/6037629
 
-Download the tar-files and unpack them in the repository. 
+Download the tar-files and unpack them in the repository.
+
+## LC-MS²Struct library
+
+The library implementing the Structured Support Vector Machine (SSVM) model working in the backend of LC-MS²Struct 
+can be found [here](https://github.com/aalto-ics-kepaco/msms_rt_ssvm). 
 
 ## Directory structure
 
