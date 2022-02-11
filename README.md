@@ -30,12 +30,8 @@ Directory containing our MassBank DB (see Methods "Training data generation usin
 get from ```data/massbank__2020.11__v0.6.1.sqlite``` to ```data/massbank_db.sqlite```. The former DB file is the 
 direct output of [massbank2db Python package](https://github.com/bachi55/massbank2db) applied to the [2020.11 
 MassBank](https://github.com/MassBank/MassBank-data/releases/tag/2020.11) release. It is added to the repository. The 
-latter DB file contains all pre-computed MS² scores, candidate sets and molecular features. It is required for our 
-experiments and will be available from **ZENODO LINK**. 
-
-The directory furthermore includes the input files for all three MS² scoring tools (see Methods "Pre-computing the 
-MS² matching scores"). 
-
+latter DB file contains all pre-computed MS² scores, candidate sets, molecular features, etc. It is required to 
+re-run the experiments. All databases and further data files can be downloaded from Zenodo: https://zenodo.org/record/5854661. 
 For further details on the data pre-processing please refer the README file in ```data```.
 
 ### Miscellaneous scripts (```misc_scripts```) 
