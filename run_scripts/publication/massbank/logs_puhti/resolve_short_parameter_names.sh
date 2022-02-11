@@ -1,0 +1,1 @@
+../resolve_short_parameter_names.sh
