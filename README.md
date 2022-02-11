@@ -1,10 +1,19 @@
-# Data, experiments and results for the LC-MS²Struct
+# Experiments and result analysis scripts for the LC-MS²Struct
 
-This repository contains the data, experiment scripts and results for the manuscript:
-```bibtex
-\article{TODO}
-```
-Use the citation information of you want to reference our work. 
+This repository contains the scripts to reproduce the experiments and analyse the results for the manuscript: 
+
+**"Joint structural annotation of small molecules using liquid chromatography retention order and tandem mass spectrometry data"**,
+
+*Eric Bach, Emma L. Schymanski and Juho Rousu*, 2022
+
+## Outputs used to produce the results in the manuscript
+
+The raw outputs of the LC-MS²Struct for the experiments presented in the manuscript are available on Zenodo:
+
+- **ALLDATA**: https://zenodo.org/record/6036208
+- **ONLYSTEREO**: https://zenodo.org/record/6037629
+
+Download the tar-files and unpack them in the repository. 
 
 ## Directory structure
 
@@ -35,4 +44,10 @@ The ```various_db_statistics.ipynb``` notebook can be used to (re-)generate tabl
 - extract meta information from our DB 
 - compute the baseline MS² scorer performances for our MassBank subset
 
+# Citation information
 
+Use the citation information of you want to reference our work:
+
+```bibtex
+\article{TODO}
+```
