@@ -35,3 +35,15 @@ data/tools/cfmid4/neg/parameters.zip
 data/tools/cfmid4/pos/param_output*.log
 data/tools/cfmid4/neg/param_output*.log
 data/temp_files
+results__ALLDATA.tar
+results__ONLYSTEREO.tar
+results_processed/comparison/
+results_raw
+build
+data/db_processing_scripts.tar
+data/substructure_fingerprints
+data/substructure_fingerprints.tar
+data/tools/
+data/massbank.sqlite.gz
+results_processed/publication/massbank/ssvm_lib=v2__exp_ver=4/massbank
+results_processed/publication/massbank/ssvm_lib=v2__exp_ver=4/massbank__with_stereo/

@@ -1,4 +1,4 @@
-# Data used in "Machine learning for joint structural annotation of metabolites using LC retention time order and tandem mass spectrometry data"
+# Data used in "Joint structural annotation of small molecules using liquid chromatography retention order and tandem mass spectrometry data"
 
 The experimental data including:
 
