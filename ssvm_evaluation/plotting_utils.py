@@ -250,11 +250,11 @@ def plot__02__b(
                 (results_out[-1]["n_class_support"] * results_out[-1]["top_k_p_improvement"]) / 100
 
     # Adjust y-axis range to provide enough space for the labels
-    _y_add = [0.5, 1.1]
-    for ax_col_idx, _ in enumerate(ks):
+    _y_add = {1: 0.5, 5: 0.5, 20: 1.1}
+    for ax_col_idx, _k in enumerate(ks):
         for ax in axrr[:, ax_col_idx]:
             _y_min, _y_max = ax.get_ylim()
-            ax.set_ylim(_y_min - _y_add[ax_col_idx], _y_max)
+            ax.set_ylim(_y_min - _y_add.get(_k, 0.0), _y_max)
 
     plt.tight_layout()
 
@@ -454,7 +454,7 @@ def plot__02__a(
 
             ax = sns.barplot(
                 data=_res_sub, x="classyfire_%s" % cf_level, y="top_k_p_improvement", ax=ax, palette=palette,
-                order=order
+                order=order, seed=1020
             )
             ax.grid(axis="y")
             ax.hlines(0, ax.get_xlim()[0] - 1, ax.get_xlim()[1] + 1, color='k', linestyle="--")
@@ -512,11 +512,11 @@ def plot__02__a(
                 (results_out[-1]["n_class_support"] * results_out[-1]["top_k_p_improvement"]) / 100
 
     # Adjust y-axis range to provide enough space for the labels
-    _y_add = [0.6, 0.9]
-    for ax_col_idx, _ in enumerate(ks):
+    _y_add = {1: 0.6, 5: 0.9, 20: 0.9}
+    for ax_col_idx, _k in enumerate(ks):
         for ax in axrr[:, ax_col_idx]:
             _y_min, _y_max = ax.get_ylim()
-            ax.set_ylim(_y_min - _y_add[ax_col_idx], _y_max)
+            ax.set_ylim(_y_min - _y_add.get(_k, 0.0), _y_max)
 
     plt.tight_layout()
 
