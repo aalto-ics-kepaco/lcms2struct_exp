@@ -432,7 +432,9 @@ def plot__02__a(
                             "rank_onlyms": lambda x: _get_topk(x, k, topk_method),
                             "rank_msplrt": lambda x: _get_topk(x, k, topk_method),
                             "n_cand": np.median,
-                            "n_isomers": np.median,
+                            "n_isomers": lambda x: "min=%d, max=%d, avg=%.1f, med=%.1f" % (
+                                np.min(x), np.max(x), np.mean(x), np.median(x)
+                            ),
                             "molecule_identifier": len
                          })
                         .rename({
