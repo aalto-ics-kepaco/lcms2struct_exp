@@ -250,7 +250,7 @@ def plot__02__b(
                 (results_out[-1]["n_class_support"] * results_out[-1]["top_k_p_improvement"]) / 100
 
     # Adjust y-axis range to provide enough space for the labels
-    _y_add = {1: 0.5, 5: 0.5, 20: 1.1}
+    _y_add = {1: 1.0, 5: 0.5, 20: 1.75}
     for ax_col_idx, _k in enumerate(ks):
         for ax in axrr[:, ax_col_idx]:
             _y_min, _y_max = ax.get_ylim()
@@ -395,7 +395,7 @@ def plot__02__a(
     if cf_level == "class":
         for idx, (cf_sc, tmp) in enumerate(cf_cls_stats.groupby("classyfire_superclass")):
             for cf_c in sorted(tmp["classyfire_class"].unique()):
-                if colormap_name is "fixed":
+                if colormap_name == "fixed":
                     palette[cf_c] = MY_CLASSYFIRE_CLASSES_COLORMAP[cf_sc]
                 else:
                     palette[cf_c] = cm.get_cmap(colormap_name)(idx)
@@ -404,7 +404,7 @@ def plot__02__a(
                 superlevel[cf_c] = cf_sc
     elif cf_level == "superclass":
         for idx, (cf_sc, _) in enumerate(cf_cls_stats.groupby("classyfire_superclass")):
-            if colormap_name is "fixed":
+            if colormap_name == "fixed":
                 palette[cf_sc] = MY_CLASSYFIRE_CLASSES_COLORMAP[cf_sc]
             else:
                 palette[cf_sc] = cm.get_cmap(colormap_name)(idx)
@@ -514,7 +514,7 @@ def plot__02__a(
                 (results_out[-1]["n_class_support"] * results_out[-1]["top_k_p_improvement"]) / 100
 
     # Adjust y-axis range to provide enough space for the labels
-    _y_add = {1: 0.6, 5: 0.9, 20: 0.9}
+    _y_add = {1: 1.25, 5: 0.9, 20: 1.5}
     for ax_col_idx, _k in enumerate(ks):
         for ax in axrr[:, ax_col_idx]:
             _y_min, _y_max = ax.get_ylim()

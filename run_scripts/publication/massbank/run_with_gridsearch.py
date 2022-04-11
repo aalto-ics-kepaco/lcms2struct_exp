@@ -692,7 +692,7 @@ if __name__ == "__main__":
                     % X_train_sub.shape[0]
                 )
 
-                # Compute the gamma using the median heuristic: Features should be already are already z-transformed
+                # Compute the gamma using the median heuristic: Features should be already z-transformed
                 _start = time.time()
                 gamma = get_rbf_gamma_based_in_median_heuristic(X_train_sub, standardize=False)
                 LOGGER.info("Gamma of the RBF kernel (median heuristic): %f" % gamma)
