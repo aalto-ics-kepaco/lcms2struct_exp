@@ -10,7 +10,7 @@ This repository contains the scripts to reproduce the experiments and analyse th
 
 The raw outputs of the LC-MS²Struct for the experiments presented in the manuscript are available on Zenodo:
 
-- **ALLDATA**: https://zenodo.org/record/6036208
+- **ALLDATA**: https://zenodo.org/record/6451016
 - **ONLYSTEREO**: https://zenodo.org/record/6037629
 
 Download the tar-files and unpack them in the repository.
