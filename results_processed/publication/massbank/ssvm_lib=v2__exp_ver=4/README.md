@@ -24,6 +24,9 @@ conda activate lcms2struct_manuscript_figures
 3) Make the environment available in your JupyterLab
 ```bash
 python -m ipykernel install --user --name=lcms2struct_manuscript_figures
+
+## Expected output
+# Installed kernelspec lcms2struct_manuscript_figures in /path/to/your/home/.local/share/jupyter/kernels/lcms2struct_manuscript_figures
 ```
 4) Install the figure helper-tools
 ```bash
