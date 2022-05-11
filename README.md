@@ -42,7 +42,7 @@ The repository is organized in different subdirectories those content is describ
 - ```results_raw```: Contains the "raw" result files as produces by our experimental scripts (download from Zenodo)
 - ```results_processed```: Contains the result files as used to produce the figures in our manuscript, e.g. 
   aggregated max-margins, comparison methods, ... (download from Zenodo)
-- 
+- ```ssvm_evaluation```: Script generating the figures from the data (library)
 
 # Citation information
 
