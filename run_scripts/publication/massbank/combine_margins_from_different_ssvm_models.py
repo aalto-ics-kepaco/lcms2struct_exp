@@ -162,7 +162,7 @@ def get_cli_arguments() -> argparse.Namespace:
     arg_parser.add_argument("--margin_aggregation_fun", default="average", choices=["average"])
     arg_parser.add_argument(
         "--mol_feat_retention_order",
-        type=str, default="FCFP__binary__all__2D", choices=["FCFP__binary__all__2D", "FCFP__binary__all__3D"]
+        type=str, default="FCFP__binary__all__3D", choices=["FCFP__binary__all__2D", "FCFP__binary__all__3D"]
     )
     arg_parser.add_argument("--molecule_identifier", type=str, default="cid", choices=["cid"])
 
@@ -309,8 +309,7 @@ def aggregate_scores(marginals, score_key="score"):
 if __name__ == "__main__":
     args = get_cli_arguments()
 
-    # Find all 'ds=*__*/tree_index=*/top_k__spl=*.tsv'. Those corresponding the (dataset, sample, tree) setting which
-    # already finished on Triton.
+    # Find all 'ds=*__*/ssvm_model_idx=*/top_k__spl=*.tsv'
     avail_res_df = []
 
     # Parameters describing the experiment
@@ -364,7 +363,7 @@ if __name__ == "__main__":
         output_dir = os.path.join(
             os.sep,
             os.path.join(*_avail_res_df["fn"].iloc[0].split(os.sep)[:-2]).replace("results_raw", "results_processed"),
-            dict2fn(_o_setting),
+            dict2fn(_o_setting, pref="debug" if args.debug else None),
             dict2fn(
                 {
                     "marg_agg_fun": args.margin_aggregation_fun,

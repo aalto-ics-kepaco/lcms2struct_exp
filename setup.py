@@ -7,23 +7,14 @@ with open(ver_path) as ver_file:
     exec(ver_file.read(), main_ns)
 
 setup(
-    name="ssvm_evaluation",  # TODO: This name is already in PyPi. We need to choose something different.
+    name="ssvm_evaluation",
     version=main_ns["__version__"],
     license="MIT",
     packages=find_packages(exclude=["tests", "examples", "*.ipynb"]),
 
-    # Minimum requirements the package was tested with
-    install_requires=[
-        "numpy",
-        "scikit-learn",
-        "pandas",
-        "scipy",
-        "more-itertools",
-    ],
-
     # Metadata
     author="Eric Bach",
     author_email="eric.bach@aalto.fi",
-    description="Experimental results and analysis of our SSVM MS and RT score integration.",
-    url="https://github.com/aalto-ics-kepaco/msms_rt_ssvm_experiments",
+    description="Tools to produce the figures in our LC-MS2Struct manuscript.",
+    url="https://github.com/aalto-ics-kepaco/lcms2struct_exp",
 )

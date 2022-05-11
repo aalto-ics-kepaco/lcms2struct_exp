@@ -86,7 +86,7 @@ def get_cli_arguments() -> argparse.Namespace:
     arg_parser.add_argument(
         "--db_fn",
         type=str,
-        default="/home/bach/Documents/doctoral/projects/lcms2struct/data/massbank.sqlite",
+        default="/home/bach/Documents/doctoral/projects/lcms2struct_experiments/data/massbank.sqlite",
         help="Path to the MassBank database."
     )
     arg_parser.add_argument(
@@ -159,7 +159,7 @@ def get_cli_arguments() -> argparse.Namespace:
     arg_parser.add_argument(
         "--mol_feat_retention_order",
         type=str,
-        default="FCFP__binary__all__2D",
+        default="FCFP__binary__all__3D",
         choices=["FCFP__binary__all__2D", "FCFP__binary__all__3D", "bouwmeester__smiles_iso"],
         help="The molecule feature representation used in the SSVM model."
     )
@@ -829,7 +829,7 @@ if __name__ == "__main__":
                 % X_train_sub.shape[0]
             )
 
-            # Compute the gamma using the median heuristic: Features should be already are already z-transformed
+            # Compute the gamma using the median heuristic: Features should be already z-transformed
             _start = time.time()
             gamma = get_rbf_gamma_based_in_median_heuristic(X_train_sub, standardize=False)
             LOGGER.info("Gamma of the RBF kernel (median heuristic): %f" % gamma)
@@ -852,10 +852,23 @@ if __name__ == "__main__":
     # Evaluate performance
     # ====================
     LOGGER.info("=== Evaluate SSVM performance on the evaluation set ===")
-    candidates = CandSQLiteDB_Massbank(
-        db_fn=args.db_fn, molecule_identifier=args.molecule_identifier,  init_with_open_db_conn=False,
-        feature_transformer=candidate_set_training.get_feature_transformer()
-    )
+    if args.debug:
+        max_n_test_candidates = 150
+        LOGGER.warning(
+            "We are running in debug mode. Reduced candidate set sizes will be used in the evaluation (n_max_cand=%d)"
+            % max_n_test_candidates
+        )
+
+        candidates = RandomSubsetCandSQLiteDB_Massbank(
+            db_fn=args.db_fn, molecule_identifier=args.molecule_identifier, random_state=(eval_set_id + 1),
+            number_of_candidates=max_n_test_candidates, include_correct_candidate=True,
+            init_with_open_db_conn=False, feature_transformer=candidate_set_training.get_feature_transformer()
+        )
+    else:
+        candidates = CandSQLiteDB_Massbank(
+            db_fn=args.db_fn, molecule_identifier=args.molecule_identifier,  init_with_open_db_conn=False,
+            feature_transformer=candidate_set_training.get_feature_transformer()
+        )
 
     with candidates:
         LOGGER.info("\tSpectrum - n_candidates:")

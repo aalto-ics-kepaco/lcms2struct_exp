@@ -39,11 +39,29 @@ esac
 EXP_VERSION=4
 SSVM_LIBRARY_VERSION=v2
 
-MOL_FEATURES_SHORT="fcfp_2D"
+# Molecular features used to represent the candidates. 3D FCFP fingerprints are the default (see manuscript).
+MOL_FEATURES_SHORT="fcfp_3D"
+
+# MS2 scorer for which the experiments should be run. Choices are:
+# - "cfmid4"
+# - "metfrag"
+# - "sirius"
 MS2SCORER_SHORT="cfmid4"
+
+# Number of SSVM models for the margin prediction. The C parameter is only optimized for the first SSVM and subsequently
+# used for the other models.
 N_SSVM_MODELS=8
+
+# As described in the paper, we use the PubChem CID to identify the molecules in our database. Candidate score
+# collapsing, e.g. by the aggregation per InChIKey, is performed in a post-processing step.
 MOL_IDENTIFIER="cid"
+
+# Define training and evaluation set. Choices are:
+# - "massbank":               which corresponds to the ALLDATA setting described in the manuscript
+# - "massbank__with_stereo":  which corresponds to the ONLYSTEREO setting
 TRAINING_DATASET="massbank"
+
+# Nothing to choose here.
 SSVM_FLAVOR="default"
 
 # Resolve short parameter names
@@ -107,8 +125,7 @@ N_DATASETS=${#N_SAMPLES[@]}  # Number of datasets
 sleep 3s
 
 # Start the jobs for all datasets
-# for (( i=0; i<N_DATASETS; i++ ))
-for (( i=0; i<1; i++ ))
+for (( i=0; i<N_DATASETS; i++ ))
 do
   echo "Submit dataset '$i' with '${N_SAMPLES[$i]}' samples."
 

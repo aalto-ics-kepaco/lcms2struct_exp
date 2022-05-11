@@ -28,7 +28,7 @@ import re
 import pandas as pd
 import glob
 
-from typing import Dict, Optional, Tuple, Union
+from typing import Dict, Optional, Tuple
 
 from pandas.api.types import is_float, is_bool, is_integer
 
