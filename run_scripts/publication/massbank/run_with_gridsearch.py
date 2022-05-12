@@ -72,7 +72,13 @@ def get_cli_arguments() -> argparse.Namespace:
     """
     arg_parser = argparse.ArgumentParser()
 
-    arg_parser.add_argument("eval_set_id", type=int, choices=range(0, 3200))
+    arg_parser.add_argument(
+        "eval_set_id",
+        type=int,
+        choices=range(0, 3200),
+        help="Index of the evaluation set. Example: 301 means 3rd MassBank-subset and second (zero-based) evaluation "
+             "set, 1212 means 12th dataset and 13th (zero-based) evaluation set."
+    )
     arg_parser.add_argument(
         "ssvm_model_idx",
         type=int,
