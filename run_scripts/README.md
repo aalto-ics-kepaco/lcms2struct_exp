@@ -134,7 +134,7 @@ debugging/
             ├── top_k__spl=0.tsv
             └── train_stats__spl=0.tsv
 ```
-   Here, ```combined``` refers to the aggregated max-margins (averaged across the SSVM models) and the candidate scores
+   Here, ```combined``` refers to the [aggregated max-margins](publication/massbank/combine_margins_from_different_ssvm_models.py#L44) (averaged across the SSVM models) and the candidate scores
    being collapsed based on ```cand_agg_id```. The top-k accuracies (comparing Only MS² and LC-MS²Struct (MS + RT)) 
    performance are stored as well (```top_k.tsv```), whereby all evaluation subsets for the particular MassBank 
    subset are stored in a single file.
