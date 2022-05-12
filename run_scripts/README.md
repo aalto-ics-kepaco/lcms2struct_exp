@@ -108,7 +108,7 @@ python combine_margins_from_different_ssvm_models.py \
   --write_out_averaged_margins \
   --debug
 ```
-   Note that you need to give the full path to the location of the max-marginals' base-directory. 
+   Note that you need to give the absolute path to the location of the max-marginals' base-directory. 
 
 8) After running the above command the directory structure will look like:
 ```bash
