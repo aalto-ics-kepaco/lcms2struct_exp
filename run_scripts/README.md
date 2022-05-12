@@ -33,7 +33,7 @@ You can compare your output to files on Zenodo.
 ### Small example to test our implementation
 
 Here we will give a minimal example, which can serve as a starting point to re-produce our experiments. If you want to 
-apply a trained LC-MS²Struct model to new data, you can train a model as done in [```run_with_gridsearch.py```](publication/massbank/run_with_gridsearch.py), but you need to implement your [own candidate set wrapper](https://github.com/aalto-ics-kepaco/msms_rt_ssvm/tree/master/ssvm). 
+apply a trained LC-MS²Struct model to new data, you can train a model as done in [```run_with_gridsearch.py```](publication/massbank/run_with_gridsearch.py), but you need to implement your [own candidate set wrapper](https://github.com/aalto-ics-kepaco/msms_rt_ssvm/blob/master/ssvm/README.md#own-candidate-db-wrappers). 
 
 To run our minimal example, please follow the following instructions. We assume that you are at the root of this 
 repository. Please note that all code was developed and tested in a **Linux** environment. Other operating systems are 
