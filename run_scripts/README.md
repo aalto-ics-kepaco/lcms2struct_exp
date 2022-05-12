@@ -9,7 +9,7 @@ There is a subdirectory ```massbank``` for each setting which contains the run-s
 
 ## LC-MS²Struct experiments
 
-All experiments with the LC-MS²Struct implementation can be performed with the script ```run_with_gridsearch.py```. 
+All experiments with the LC-MS²Struct implementation can be performed with the script [```run_with_gridsearch.py```](publication/massbank/run_with_gridsearch.py). 
 The input parameters are specified in [```load_experiment_parameter.sh```](publication/massbank/load_experiment_parameters.sh) (for the manuscript experiment version 4 was used). For each conducted experiment the complete list of command line interface parameters can be found, for example,
 [here](example_parameters_ALLDATA.list) (ALLDATA setting) or [here](example_parameters_ONLYSTEREO.list) (ONLYSTEREO).
 Such parameter files are outputted by each experiment can be found alongside the results in ```results_raw``` folder 
