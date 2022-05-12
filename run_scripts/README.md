@@ -45,7 +45,7 @@ not supported.
 ```bash
 gunzip /path/to/your/massbank.sqlite.gz
 
-## Will produce the file: /path/to/your/massbank.sqlite
+## Will produce the file: /path/to/your/massbank__with_pubchemlite.sqlite
 ```
 4) Change to directory containing the run-script: 
 ```bash
@@ -53,7 +53,7 @@ cd run_scripts/publication/massbank
 ```
 5) Run the training and max-margin prediction for **two** SSVM model:
 ```bash
-NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2;
+NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2; \
 python run_with_gridsearch.py 0 0 \
   --n_jobs=2 \
   --n_threads_test_prediction=4 \
@@ -63,12 +63,12 @@ python run_with_gridsearch.py 0 0 \
   --ms2scorer=cfmid4__norm \
   --C_grid 64 \
   --n_epochs=2 \
-  --db_fn=/path/to/your/massbank.sqlite \
+  --db_fn=/path/to/your/massbank__with_pubchemlite.sqlite \
   --training_dataset=massbank
 ```
 and 
 ```bash
-NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2;
+NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2; \
 python run_with_gridsearch.py 0 1 \
   --n_jobs=2 \
   --n_threads_test_prediction=4 \
@@ -78,7 +78,7 @@ python run_with_gridsearch.py 0 1 \
   --ms2scorer=cfmid4__norm \
   --C_grid 64 \
   --n_epochs=2 \
-  --db_fn=/path/to/your/massbank.sqlite \
+  --db_fn=/path/to/your/massbank__with_pubchemlite.sqlite \
   --training_dataset=massbank
 ```
 
