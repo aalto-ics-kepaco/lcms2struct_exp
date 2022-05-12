@@ -53,7 +53,8 @@ cd run_scripts/publication/massbank
 ```
 5) Run the training and max-margin prediction for **two** SSVM model:
 ```bash
-NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2; \
+NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2;
+
 python run_with_gridsearch.py 0 0 \
   --n_jobs=2 \
   --n_threads_test_prediction=4 \
@@ -68,7 +69,8 @@ python run_with_gridsearch.py 0 0 \
 ```
 and 
 ```bash
-NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2; \
+NUMBA_NUM_THREADS=2;OMP_NUM_THREADS=2;OPENBLAS_NUM_THREADS=2;
+
 python run_with_gridsearch.py 0 1 \
   --n_jobs=2 \
   --n_threads_test_prediction=4 \
