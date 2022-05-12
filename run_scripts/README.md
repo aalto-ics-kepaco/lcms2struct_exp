@@ -20,7 +20,7 @@ at the root of this repository (please note that for that you need to download t
 ### Instructions to re-run our experiments
 
 For our manuscript, we ran the experiments on a cluster. If you want to reproduce the full setting, then this can be 
-done by adapting the ```run_with_gridsearch.sh``` to your cluster. This script trains eight (8) SSVM models for each
+done by adapting the [```run_massbank__with_deps.sh```](publication/massbank/run_massbank__with_deps.sh) to your cluster. This script trains eight (8) SSVM models for each
 evaluation set (```eval_set_id```). In total this are about 350 jobs for ALLDATA and about 100 jobs for ONLYSTEREO. 
 The script furthermore produces the files in ```results_raw```, which we uploaded to Zenodo:
 
