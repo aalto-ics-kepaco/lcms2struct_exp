@@ -21,7 +21,7 @@ at the root of this repository (please note that for that you need to download t
 
 For our manuscript, we ran the experiments on a cluster. If you want to reproduce the full setting, then this can be 
 done by adapting the [```run_massbank__with_deps.sh```](publication/massbank/run_massbank__with_deps.sh) to your cluster. This script trains eight (8) SSVM models for each
-evaluation set ([```eval_set_id```](https://github.com/aalto-ics-kepaco/lcms2struct_exp/blob/1be7c34fa91d0217ec742120e4ab5e1c01b4fe9f/run_scripts/publication/massbank/run_with_gridsearch.py#L75)). In total this are about 350 jobs for ALLDATA and about 100 jobs for ONLYSTEREO. 
+evaluation set ([```eval_set_id```](publication/massbank/run_with_gridsearch.py#L75)). In total this are about 350 jobs for ALLDATA and about 100 jobs for ONLYSTEREO. 
 The script furthermore produces the files in ```results_raw```, which we uploaded to Zenodo:
 
 - Predicted max-marginal scores for each MassBank-subset and sampled LC-MS² dataset  
