@@ -32,9 +32,8 @@ You can compare your output to files on Zenodo.
 
 ### Small example to test our implementation
 
-Here we will a minimal example, which can serve as starting point to re-produce our experiments. If you want to 
-apply a trained LC-MS²Struct model to new data, you can train a model as done in ```run_with_gridsearch.py```, but 
-you need to implement your [own candidate set wrapper](https://github.com/aalto-ics-kepaco/msms_rt_ssvm/tree/master/ssvm). 
+Here we will give a minimal example, which can serve as a starting point to re-produce our experiments. If you want to 
+apply a trained LC-MS²Struct model to new data, you can train a model as done in [```run_with_gridsearch.py```](publication/massbank/run_with_gridsearch.py), but you need to implement your [own candidate set wrapper](https://github.com/aalto-ics-kepaco/msms_rt_ssvm/tree/master/ssvm). 
 
 To run our minimal example, please follow the following instructions. We assume that you are at the root of this 
 repository. Please note that all code was developed and tested in a **Linux** environment. Other operating systems are 
@@ -42,7 +41,12 @@ not supported.
 
 1) Install the [LC-MS²Struct](https://github.com/aalto-ics-kepaco/msms_rt_ssvm) described in the repository
 2) Make sure that the conda environment you installed LC-MS²Struct into is activated
-3) Download our [massbank.sqlite](https://zenodo.org/record/5854661) database file
+3) Download our [massbank.sqlite.gz](https://zenodo.org/record/5854661) database file and unpack it:
+```bash
+gunzip /path/to/your/massbank.sqlite.gz
+
+## Will produce the file: /path/to/your/massbank.sqlite
+```
 4) Change to directory containing the run-script: 
 ```bash
 cd run_scripts/publication/massbank
@@ -59,7 +63,7 @@ python run_with_gridsearch.py 0 0 \
   --ms2scorer=cfmid4__norm \
   --C_grid 64 \
   --n_epochs=2 \
-  --db_fn=/path/to/your/massbank_copy.sqlite \
+  --db_fn=/path/to/your/massbank.sqlite \
   --training_dataset=massbank
 ```
 and 
@@ -74,7 +78,7 @@ python run_with_gridsearch.py 0 1 \
   --ms2scorer=cfmid4__norm \
   --C_grid 64 \
   --n_epochs=2 \
-  --db_fn=/path/to/your/massbank_copy.sqlite \
+  --db_fn=/path/to/your/massbank.sqlite \
   --training_dataset=massbank
 ```
 
