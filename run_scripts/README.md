@@ -85,7 +85,7 @@ python run_with_gridsearch.py 0 1 \
 ```
 
 Running this scripts will take about 25 minutes on a modern 4 core machine. You might need to adapt the 
-```*_NUM_THREADS``` variables and [```n_jobs```](publication/massbank/run_with_gridsearch.py#L83) setting with 
+```*_NUM_THREADS``` variables and [```n_jobs```](publication/massbank/run_with_gridsearch.py#L89) setting with 
 respect to the actual number of your **physical** cores, i.e. ```*_NUM_THREADS``` x ```n_jobs``` = number of physical 
 cores available. Please also have a look on the cluster scripts ([```run_massbank__with_deps.sh```](publication/massbank/run_massbank__with_deps.sh) and [```_run_massbank.sh```](publication/massbank/_run_massbank.sh))
 to see we configured the thread settings given a specific amount of resources.
