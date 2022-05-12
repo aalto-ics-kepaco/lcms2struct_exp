@@ -10,8 +10,7 @@ There is a subdirectory ```massbank``` for each setting which contains the run-s
 ## LC-MS²Struct experiments
 
 All experiments with the LC-MS²Struct implementation can be performed with the script ```run_with_gridsearch.py```. 
-The input parameters are specified in ```load_experiment_parameter.sh``` (for the manuscript experiment version 4 was
-used). For each conducted experiment the complete list of command line interface parameters can be found, for example,
+The input parameters are specified in [```load_experiment_parameter.sh```](publication/massbank/load_experiment_parameters.sh) (for the manuscript experiment version 4 was used). For each conducted experiment the complete list of command line interface parameters can be found, for example,
 [here](example_parameters_ALLDATA.list) (ALLDATA setting) or [here](example_parameters_ONLYSTEREO.list) (ONLYSTEREO).
 Such parameter files are outputted by each experiment can be found alongside the results in ```results_raw``` folder 
 at the root of this repository (please note that for that you need to download the result files from the Zenodo: 
@@ -80,7 +79,7 @@ python run_with_gridsearch.py 0 1 \
 ```
 
 Running this scripts will take about 25 minutes on a modern 4 core machine. You might need to adapt the 
-```*_NUM_THREADS``` variables and ```n_jobs``` setting with respect to the actual number of your **physical** cores.
+```*_NUM_THREADS``` variables and [```n_jobs```](publication/massbank/run_with_gridsearch.py#L83) setting with respect to the actual number of your **physical** cores.
 Please also have a look on the cluster scripts ([```run_massbank__with_deps.sh```](publication/massbank/run_massbank__with_deps.sh) and [```_run_massbank.sh```](publication/massbank/_run_massbank.sh)) to see we 
 configured the thread settings given a specific amount of resources.
 
