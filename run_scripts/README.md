@@ -1,6 +1,6 @@
 # Script to run the experiments presented in our manuscript
 
-The scripts are contained in two the directories:
+The scripts are contained in the two directories:
 
 - ```publication```: Experiments (mainly model training) with the [LC-MS²Struct SSVM model](https://github.com/aalto-ics-kepaco/msms_rt_ssvm)
 - ```comparison```: Experiments with the comparison methods (e.g. RT filtering, XLogP3, ...)
