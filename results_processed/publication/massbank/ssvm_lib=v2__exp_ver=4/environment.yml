@@ -12,5 +12,5 @@ dependencies:
   - conda-forge::matplotlib=3.4
   - conda-forge::seaborn=0.11
   - conda-forge::ipython
-  - conda-forge::jupyterlab
+  - conda-forge::jupyterlab>=3
   - conda-forge::ipykernel
