@@ -12,6 +12,12 @@ If you wish to re-produce our results please follow the instructions given below
 performed using Linux as operating system and Python (version 3.8 and 3.9 are supported). Other operating systems are 
 not officially supported. Detailed software requirements are given alongside the reproducibility instructions.
 
+The first step for any of the following reproducibility tasks is to clone this repository: 
+```bash
+clone https://github.com/aalto-ics-kepaco/lcms2struct_exp/
+cd lcms2struct_exp
+```
+
 ### Manuscript figures
 
 The raw outputs of the LC-MS²Struct for the experiments presented in the manuscript are available on Zenodo. Download 
@@ -27,7 +33,7 @@ Detailed instructions how to re-produce the figures of the manuscript can be fou
 If you wish to re-run our experiments, you will have to install the [LC-MS²Struct library](https://github.com/aalto-ics-kepaco/msms_rt_ssvm), 
 which provides an implementation of the presented Structured Support Vector Machine (SSVM). Furthermore, you will 
 have to download our MassBank database containing all features, candidate sets, etc. from [Zenodo](https://zenodo.org/record/5854661).
-Subsequently, follow the instructions given [here](run_scripts/README.md). 
+Detailed instructions are given [here](run_scripts/README.md). 
 
 ### Re-building the MassBank DB
 
