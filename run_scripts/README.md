@@ -114,27 +114,28 @@ python combine_margins_from_different_ssvm_models.py \
 ```bash
 tree
 
-debugging/
-└── massbank
-    └── debug__ds=AC_003__lloss_mode=mol_feat_fps__mol_feat=FCFP__binary__all__3D__mol_id=cid__ms2scorer=cfmid4__norm__ssvm_flavor=default
-        ├── combined__cand_agg_id=inchikey1__marg_agg_fun=average
-        │   ├── marginals__spl=0.pkl.gz
-        │   ├── top_k__max_models.tsv
-        │   └── top_k.tsv
-        ├── ssvm_model_idx=0
-        │   ├── eval_spec_ids__spl=0.list
-        │   ├── grid_search_results__spl=0.tsv
-        │   ├── marginals__spl=0.pkl.gz
-        │   ├── parameters__spl=0.list
-        │   ├── top_k__spl=0.tsv
-        │   └── train_stats__spl=0.tsv
-        └── ssvm_model_idx=1
-            ├── eval_spec_ids__spl=0.list
-            ├── grid_search_results__spl=0.tsv
-            ├── marginals__spl=0.pkl.gz
-            ├── parameters__spl=0.list
-            ├── top_k__spl=0.tsv
-            └── train_stats__spl=0.tsv
+## Expected output:
+# debugging/
+# └── massbank
+#     └── debug__ds=AC_003__lloss_mode=mol_feat_fps__mol_feat=FCFP__binary__all__3D__mol_id=cid__ms2scorer=cfmid4__norm__ssvm_flavor=default
+#         ├── combined__cand_agg_id=inchikey1__marg_agg_fun=average
+#         │   ├── marginals__spl=0.pkl.gz
+#         │   ├── top_k__max_models.tsv
+#         │   └── top_k.tsv
+#         ├── ssvm_model_idx=0
+#         │   ├── eval_spec_ids__spl=0.list
+#         │   ├── grid_search_results__spl=0.tsv
+#         │   ├── marginals__spl=0.pkl.gz
+#         │   ├── parameters__spl=0.list
+#         │   ├── top_k__spl=0.tsv
+#         │   └── train_stats__spl=0.tsv
+#         └── ssvm_model_idx=1
+#             ├── eval_spec_ids__spl=0.list
+#             ├── grid_search_results__spl=0.tsv
+#             ├── marginals__spl=0.pkl.gz
+#             ├── parameters__spl=0.list
+#             ├── top_k__spl=0.tsv
+#             └── train_stats__spl=0.tsv
 ```
    Here, ```combined``` refers to the [aggregated max-margins](publication/massbank/combine_margins_from_different_ssvm_models.py#L44) (averaged across the SSVM models) and the candidate scores
    being collapsed based on ```cand_agg_id```. The top-k accuracies (comparing Only MS² and LC-MS²Struct (MS + RT)) 
