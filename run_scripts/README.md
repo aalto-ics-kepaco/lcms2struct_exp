@@ -112,6 +112,8 @@ python combine_margins_from_different_ssvm_models.py \
 
 8) After running the above command the directory structure will look like:
 ```bash
+tree
+
 debugging/
 └── massbank
     └── debug__ds=AC_003__lloss_mode=mol_feat_fps__mol_feat=FCFP__binary__all__3D__mol_id=cid__ms2scorer=cfmid4__norm__ssvm_flavor=default
