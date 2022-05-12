@@ -153,8 +153,8 @@ def get_cli_arguments() -> argparse.Namespace:
 
     arg_parser.add_argument("base_dir", help="Directory containing the results for the different tree indices.")
     arg_parser.add_argument("ms2scorer", choices=["metfrag__norm", "sirius__norm", "cfmid4__norm"], type=str)
-    arg_parser.add_argument("--candidate_aggregation_identifier", default=None)
-    arg_parser.add_argument("--dataset", default=None)
+    arg_parser.add_argument("--candidate_aggregation_identifier", default=None, help="Identifier to use for collapsing the candidate scores.")
+    arg_parser.add_argument("--dataset", default=None, help="If not None, only the margins of the specified MassBank setsub are aggregated.")
     arg_parser.add_argument("--write_out_averaged_margins", action="store_true")
     arg_parser.add_argument("--debug", action="store_true")
 
