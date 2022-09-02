@@ -616,7 +616,8 @@ def plot__01__a(
         max_k: int = 20,
         weighted_average: bool = False,
         raise_on_missing_results: bool = True,
-        verbose: bool = False
+        verbose: bool = False,
+        sharey: Union[bool, str] = False
 ):
     """
     Plot comparing the top-k accuracy performance for k in {1, ..., max_k} of the different scoring methods:
@@ -742,7 +743,7 @@ def plot__01__a(
         _n_cols = n_scorer
         _figsize = (4.5 * n_scorer, 5.75)
 
-    fig, axrr = plt.subplots(_n_rows, _n_cols, figsize=_figsize, sharex="all", sharey=False, squeeze=False)
+    fig, axrr = plt.subplots(_n_rows, _n_cols, figsize=_figsize, sharex="all", sharey=sharey, squeeze=False)
 
     # Set some plot properties
     k_ticks = np.arange(0, max_k + 1, 5)
