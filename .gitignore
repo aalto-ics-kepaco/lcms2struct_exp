@@ -3,7 +3,6 @@
 **/*.conf
 **/*.cands*
 **/*.peaks
-**/*.csv*
 **/*.tar.gz
 __pycache__
 **/ISOTOPE.DAT
@@ -47,3 +46,5 @@ data/tools/
 data/massbank.sqlite.gz
 results_processed/publication/massbank/ssvm_lib=v2__exp_ver=4/massbank
 results_processed/publication/massbank/ssvm_lib=v2__exp_ver=4/massbank__with_stereo/
+data/PubChemLite_31Oct2020_exposomics.csv
+misc_scripts/massbank_groups__meta_data.csv
