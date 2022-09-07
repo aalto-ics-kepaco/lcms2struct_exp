@@ -68,5 +68,9 @@ Use the citation information of you want to reference our work:
 }
 ```
 Software citation: 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7043687.svg)](https://doi.org/10.5281/zenodo.7043687)
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7057255.svg)](https://doi.org/10.5281/zenodo.7057255)
+
+
 
